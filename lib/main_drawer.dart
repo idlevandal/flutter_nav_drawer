@@ -56,6 +56,8 @@ class DrawerListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       onTap: () {
+        // this closes the drawer so when we navigate back the drawer isn't open
+        Navigator.pop(context);
         Navigator.pushNamed(context, dRouteName);
       },
       leading: Icon(drawerIcon),
